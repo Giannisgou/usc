@@ -1,0 +1,5 @@
+# cat exp/mono/decode_dev_bg/scoring_kaldi/penalty_0.0/8.txt | compute-wer --text --mode=present ark:exp/mono/decode_dev_bg/scoring_kaldi/test_filt.txt ark,p:- >& exp/mono/decode_dev_bg/wer_8_0.0 
+# Started at Wed Apr  2 16:33:08 EEST 2025
+#
+# Accounting: time=0 threads=1
+# Ended (code 0) at Wed Apr  2 16:33:09 EEST 2025, elapsed time 0 seconds

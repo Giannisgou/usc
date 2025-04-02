@@ -1,0 +1,6 @@
+# cat exp/mono/decode_dev_bg/scoring_kaldi/wer_details/per_utt | utils/scoring/wer_ops_details.pl --special-symbol '***' | sort -b -i -k 1,1 -k 4,4rn -k 2,2 -k 3,3 > exp/mono/decode_dev_bg/scoring_kaldi/wer_details/ops 
+# Started at Wed Apr  2 16:33:34 EEST 2025
+#
+utils/scoring/wer_ops_details.pl: Note: handling as utf-8 text
+# Accounting: time=1 threads=1
+# Ended (code 0) at Wed Apr  2 16:33:35 EEST 2025, elapsed time 1 seconds

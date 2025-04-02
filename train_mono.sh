@@ -1,4 +1,5 @@
 #!/bin/bash
+# 4.4.1
 source path.sh || exit 1;
 
 data_dir=data/train
