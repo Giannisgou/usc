@@ -1,5 +1,5 @@
 #!/bin/bash
-
+source path.sh
 # Δημιουργία βασικού φακέλου data και υποφακέλων για training, validation και testing
 mkdir -p data/train data/dev data/test
 

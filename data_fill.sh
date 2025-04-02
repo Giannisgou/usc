@@ -18,7 +18,7 @@
 #   002<TAB>Jane may earn more money by working hard.
 #   003<TAB>She is thinner than I am.
 #   ...
-
+source path.sh
 # -- Ρυθμίσεις διαδρομών --
 FILESETS_DIR="files/filesets"          # Περιέχει τα training.txt, validation.txt, testing.txt
 WAV_DIR="files/wav"                    # Περιέχει τα .wav αρχεία

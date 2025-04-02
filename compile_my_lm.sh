@@ -10,7 +10,7 @@
 #   - Το Kaldi και το IRSTLM είναι εγκατεστημένα, και έχει γίνει `source path.sh`.
 #   - Υπάρχουν τα αρχεία data/local/lm_tmp/unigram.ilm.gz και bigram.ilm.gz
 #   - Θέλουμε να παράγουμε, αντίστοιχα, τα unigram_lm_phone_ug.arpa.gz και bigram_lm_phone_bg.arpa.gz
-
+source path.sh
 #!/usr/bin/env bash
 set -e
 
