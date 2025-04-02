@@ -1,4 +1,5 @@
 <oov> 1.0	<oov>
+<unk> 1.0	<unk>
 aa 1.0	aa
 ae 1.0	ae
 ah 1.0	ah

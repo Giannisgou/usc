@@ -1,4 +1,5 @@
 <oov> <oov>_S
+<unk> <unk>_S
 aa aa_S
 ae ae_S
 ah ah_S

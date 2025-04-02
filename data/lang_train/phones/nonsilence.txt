@@ -2,6 +2,10 @@
 <oov>_E
 <oov>_I
 <oov>_S
+<unk>_B
+<unk>_E
+<unk>_I
+<unk>_S
 aa_B
 aa_E
 aa_I

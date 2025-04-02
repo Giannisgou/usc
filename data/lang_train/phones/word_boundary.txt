@@ -7,6 +7,10 @@ sil_S singleton
 <oov>_E end
 <oov>_I internal
 <oov>_S singleton
+<unk>_B begin
+<unk>_E end
+<unk>_I internal
+<unk>_S singleton
 aa_B begin
 aa_E end
 aa_I internal

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#
+# 4.2.1
 # prepare_dict.sh
 # ---------------
 # Σκοπός:

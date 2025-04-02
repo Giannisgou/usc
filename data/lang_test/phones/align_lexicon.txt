@@ -1,5 +1,6 @@
 <eps> <eps> sil
 <oov> <oov> <oov>_S
+<unk> <unk> <unk>_S
 aa aa aa_S
 ae ae ae_S
 ah ah ah_S

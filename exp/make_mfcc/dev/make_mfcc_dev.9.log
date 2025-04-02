@@ -1,8 +1,8 @@
 # compute-mfcc-feats --write-utt2dur=ark,t:exp/make_mfcc/dev/utt2dur.9 --verbose=2 --config=conf/mfcc.conf scp,p:exp/make_mfcc/dev/wav_dev.9.scp ark:- | copy-feats --write-num-frames=ark,t:exp/make_mfcc/dev/utt2num_frames.9 --compress=true ark:- ark,scp:/Users/giannisgousios/kaldi/egs/usc/mfcc/raw_mfcc_dev.9.ark,/Users/giannisgousios/kaldi/egs/usc/mfcc/raw_mfcc_dev.9.scp 
-# Started at Wed Apr  2 12:21:10 EEST 2025
+# Started at Wed Apr  2 15:53:28 EEST 2025
 #
-compute-mfcc-feats --write-utt2dur=ark,t:exp/make_mfcc/dev/utt2dur.9 --verbose=2 --config=conf/mfcc.conf scp,p:exp/make_mfcc/dev/wav_dev.9.scp ark:- 
 copy-feats --write-num-frames=ark,t:exp/make_mfcc/dev/utt2num_frames.9 --compress=true ark:- ark,scp:/Users/giannisgousios/kaldi/egs/usc/mfcc/raw_mfcc_dev.9.ark,/Users/giannisgousios/kaldi/egs/usc/mfcc/raw_mfcc_dev.9.scp 
+compute-mfcc-feats --write-utt2dur=ark,t:exp/make_mfcc/dev/utt2dur.9 --verbose=2 --config=conf/mfcc.conf scp,p:exp/make_mfcc/dev/wav_dev.9.scp ark:- 
 VLOG[2] (compute-mfcc-feats[5.5.1168~1-01aad]:main():compute-mfcc-feats.cc:182) Processed features for key m3_114
 VLOG[2] (compute-mfcc-feats[5.5.1168~1-01aad]:main():compute-mfcc-feats.cc:182) Processed features for key m3_127
 VLOG[2] (compute-mfcc-feats[5.5.1168~1-01aad]:main():compute-mfcc-feats.cc:182) Processed features for key m3_139
@@ -21,4 +21,4 @@ VLOG[2] (compute-mfcc-feats[5.5.1168~1-01aad]:main():compute-mfcc-feats.cc:182) 
 LOG (compute-mfcc-feats[5.5.1168~1-01aad]:main():compute-mfcc-feats.cc:185)  Done 14 out of 14 utterances.
 LOG (copy-feats[5.5.1168~1-01aad]:main():copy-feats.cc:143) Copied 14 feature matrices.
 # Accounting: time=1 threads=1
-# Ended (code 0) at Wed Apr  2 12:21:11 EEST 2025, elapsed time 1 seconds
+# Ended (code 0) at Wed Apr  2 15:53:29 EEST 2025, elapsed time 1 seconds

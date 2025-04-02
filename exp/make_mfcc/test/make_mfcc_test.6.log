@@ -1,9 +1,9 @@
 # compute-mfcc-feats --write-utt2dur=ark,t:exp/make_mfcc/test/utt2dur.6 --verbose=2 --config=conf/mfcc.conf scp,p:exp/make_mfcc/test/wav_test.6.scp ark:- | copy-feats --write-num-frames=ark,t:exp/make_mfcc/test/utt2num_frames.6 --compress=true ark:- ark,scp:/Users/giannisgousios/kaldi/egs/usc/mfcc/raw_mfcc_test.6.ark,/Users/giannisgousios/kaldi/egs/usc/mfcc/raw_mfcc_test.6.scp 
-# Started at Wed Apr  2 12:21:14 EEST 2025
+# Started at Wed Apr  2 15:53:32 EEST 2025
 #
 compute-mfcc-feats --write-utt2dur=ark,t:exp/make_mfcc/test/utt2dur.6 --verbose=2 --config=conf/mfcc.conf scp,p:exp/make_mfcc/test/wav_test.6.scp ark:- 
-copy-feats --write-num-frames=ark,t:exp/make_mfcc/test/utt2num_frames.6 --compress=true ark:- ark,scp:/Users/giannisgousios/kaldi/egs/usc/mfcc/raw_mfcc_test.6.ark,/Users/giannisgousios/kaldi/egs/usc/mfcc/raw_mfcc_test.6.scp 
 VLOG[2] (compute-mfcc-feats[5.5.1168~1-01aad]:main():compute-mfcc-feats.cc:182) Processed features for key m1_006
+copy-feats --write-num-frames=ark,t:exp/make_mfcc/test/utt2num_frames.6 --compress=true ark:- ark,scp:/Users/giannisgousios/kaldi/egs/usc/mfcc/raw_mfcc_test.6.ark,/Users/giannisgousios/kaldi/egs/usc/mfcc/raw_mfcc_test.6.scp 
 VLOG[2] (compute-mfcc-feats[5.5.1168~1-01aad]:main():compute-mfcc-feats.cc:182) Processed features for key m1_011
 VLOG[2] (compute-mfcc-feats[5.5.1168~1-01aad]:main():compute-mfcc-feats.cc:182) Processed features for key m1_016
 VLOG[2] (compute-mfcc-feats[5.5.1168~1-01aad]:main():compute-mfcc-feats.cc:182) Processed features for key m1_021
@@ -46,4 +46,4 @@ VLOG[2] (compute-mfcc-feats[5.5.1168~1-01aad]:main():compute-mfcc-feats.cc:182) 
 LOG (compute-mfcc-feats[5.5.1168~1-01aad]:main():compute-mfcc-feats.cc:185)  Done 37 out of 37 utterances.
 LOG (copy-feats[5.5.1168~1-01aad]:main():copy-feats.cc:143) Copied 37 feature matrices.
 # Accounting: time=2 threads=1
-# Ended (code 0) at Wed Apr  2 12:21:16 EEST 2025, elapsed time 2 seconds
+# Ended (code 0) at Wed Apr  2 15:53:34 EEST 2025, elapsed time 2 seconds

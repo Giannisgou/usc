@@ -1,4 +1,5 @@
 <oov>
+<unk>
 aa
 ae
 ah

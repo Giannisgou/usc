@@ -86316,7 +86316,7 @@ OOPH	 uw f
 OOPS	 uw p s
 OOP	 uw p
 OOTEN	 uw t ah n
-OOV sil
+OOV  sil
 <oov>	<oov>
 O.	 ow
 O'	 ow
@@ -124733,6 +124733,7 @@ UNJUSTIFIABLE	 ah n jh ah s t ih f ay ah b ah l
 UNJUSTIFIABLY	 ah n jh ah s t ih f ay ah b l iy
 UNJUSTIFIED	 ah n jh ah s t ah f ay d
 UNJUSTLY	 ah n jh ah s t l iy
+<unk> <unk>
 UNKEFER	 ah ng k ih f er
 UNKEMPT	 ah n k eh m p t
 UNKIND	 ah n k ay n d

@@ -1,5 +1,6 @@
 shared split sil sil_B sil_E sil_I sil_S
 shared split <oov>_B <oov>_E <oov>_I <oov>_S
+shared split <unk>_B <unk>_E <unk>_I <unk>_S
 shared split aa_B aa_E aa_I aa_S
 shared split ae_B ae_E ae_I ae_S
 shared split ah_B ah_E ah_I ah_S
