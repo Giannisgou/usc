@@ -1,6 +1,6 @@
 # compute-wer-bootci --mode=present ark:exp/mono/decode_dev_ug/scoring_kaldi/test_filt.txt ark:exp/mono/decode_dev_ug/scoring_kaldi/penalty_0.0/7.txt > exp/mono/decode_dev_ug/scoring_kaldi/wer_details/wer_bootci 
-# Started at Wed Apr  2 16:28:59 EEST 2025
+# Started at Thu Apr  3 14:17:01 EEST 2025
 #
 compute-wer-bootci --mode=present ark:exp/mono/decode_dev_ug/scoring_kaldi/test_filt.txt ark:exp/mono/decode_dev_ug/scoring_kaldi/penalty_0.0/7.txt 
-# Accounting: time=1 threads=1
-# Ended (code 0) at Wed Apr  2 16:29:00 EEST 2025, elapsed time 1 seconds
+# Accounting: time=0 threads=1
+# Ended (code 0) at Thu Apr  3 14:17:01 EEST 2025, elapsed time 0 seconds

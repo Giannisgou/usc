@@ -1,8 +1,8 @@
 # lattice-scale --inv-acoustic-scale=8 "ark:gunzip -c exp/mono/decode_test_ug/lat.*.gz|" ark:- | lattice-add-penalty --word-ins-penalty=0.5 ark:- ark:- | lattice-best-path --word-symbol-table=data/lang_test/words.txt ark:- ark,t:- | utils/int2sym.pl -f 2- data/lang_test/words.txt | cat > exp/mono/decode_test_ug/scoring_kaldi/penalty_0.5/8.txt 
-# Started at Wed Apr  2 16:30:20 EEST 2025
+# Started at Thu Apr  3 14:18:25 EEST 2025
 #
-lattice-scale --inv-acoustic-scale=8 'ark:gunzip -c exp/mono/decode_test_ug/lat.*.gz|' ark:- 
 lattice-add-penalty --word-ins-penalty=0.5 ark:- ark:- 
+lattice-scale --inv-acoustic-scale=8 'ark:gunzip -c exp/mono/decode_test_ug/lat.*.gz|' ark:- 
 lattice-best-path --word-symbol-table=data/lang_test/words.txt ark:- ark,t:- 
 LOG (lattice-best-path[5.5.1168~1-01aad]:main():lattice-best-path.cc:99) For utterance f1_001, best cost 74.8659 + 2485.51 = 2560.37 over 237 frames.
 f1_001 dh ih z ah z iy z iy f r aa s 
@@ -734,13 +734,13 @@ LOG (lattice-best-path[5.5.1168~1-01aad]:main():lattice-best-path.cc:99) For utt
 m3_441 dh r ae k ih m ao n iy z ih k ah z ih n r eh k r ih dh ah m 
 LOG (lattice-best-path[5.5.1168~1-01aad]:main():lattice-best-path.cc:99) For utterance m3_446, best cost 117.444 + 3852.2 = 3969.64 over 355 frames.
 m3_446 iy s p iy s ah d ow z iy m ay d iy g iy ah m ah n ih 
+LOG (lattice-scale[5.5.1168~1-01aad]:main():lattice-scale.cc:107) Done 367 lattices.
 LOG (lattice-best-path[5.5.1168~1-01aad]:main():lattice-best-path.cc:99) For utterance m3_451, best cost 150.385 + 5354.47 = 5504.85 over 472 frames.
 m3_451 t ah r k ih ng ih n s uw m ah n iy f r r l s ah l n z ah d ih ng 
-LOG (lattice-scale[5.5.1168~1-01aad]:main():lattice-scale.cc:107) Done 367 lattices.
 LOG (lattice-add-penalty[5.5.1168~1-01aad]:main():lattice-add-penalty.cc:62) Done adding word insertion penalty to 367 lattices.
 LOG (lattice-best-path[5.5.1168~1-01aad]:main():lattice-best-path.cc:99) For utterance m3_456, best cost 135.928 + 4804.3 = 4940.22 over 429 frames.
 m3_456 ah m ao th ih g eh g ow ao ng ah p ae f r aw s aa r n t 
 LOG (lattice-best-path[5.5.1168~1-01aad]:main():lattice-best-path.cc:124) Overall cost per frame is 11.1985 = 0.319537 [graph] + 10.879 [acoustic] over 145641 frames.
 LOG (lattice-best-path[5.5.1168~1-01aad]:main():lattice-best-path.cc:128) Done 367 lattices, failed for 0
-# Accounting: time=74 threads=1
-# Ended (code 0) at Wed Apr  2 16:31:34 EEST 2025, elapsed time 74 seconds
+# Accounting: time=77 threads=1
+# Ended (code 0) at Thu Apr  3 14:19:42 EEST 2025, elapsed time 77 seconds

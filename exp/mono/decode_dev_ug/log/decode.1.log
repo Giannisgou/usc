@@ -1,5 +1,5 @@
 # gmm-latgen-faster --max-active=7000 --beam=13.0 --lattice-beam=6.0 --acoustic-scale=0.083333 --allow-partial=true --word-symbol-table=exp/mono/graph_ug/words.txt exp/mono/final.mdl exp/mono/graph_ug/HCLG.fst "ark,s,cs:apply-cmvn  --utt2spk=ark:data/dev/split4/1/utt2spk scp:data/dev/split4/1/cmvn.scp scp:data/dev/split4/1/feats.scp ark:- | add-deltas  ark:- ark:- |" "ark:|gzip -c > exp/mono/decode_dev_ug/lat.1.gz" 
-# Started at Wed Apr  2 16:14:27 EEST 2025
+# Started at Thu Apr  3 14:02:41 EEST 2025
 #
 gmm-latgen-faster --max-active=7000 --beam=13.0 --lattice-beam=6.0 --acoustic-scale=0.083333 --allow-partial=true --word-symbol-table=exp/mono/graph_ug/words.txt exp/mono/final.mdl exp/mono/graph_ug/HCLG.fst 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/dev/split4/1/utt2spk scp:data/dev/split4/1/cmvn.scp scp:data/dev/split4/1/feats.scp ark:- | add-deltas  ark:- ark:- |' 'ark:|gzip -c > exp/mono/decode_dev_ug/lat.1.gz' 
 add-deltas ark:- ark:- 
@@ -91,8 +91,8 @@ f1_452 iy b uh t ih ng aa ch ao uw f r s r n jh r l ah jh
 LOG (gmm-latgen-faster[5.5.1168~1-01aad]:RebuildRepository():determinize-lattice-pruned.cc:283) Rebuilding repository.
 LOG (gmm-latgen-faster[5.5.1168~1-01aad]:RebuildRepository():determinize-lattice-pruned.cc:283) Rebuilding repository.
 LOG (gmm-latgen-faster[5.5.1168~1-01aad]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance f1_452 is -7.15628 over 494 frames.
-LOG (gmm-latgen-faster[5.5.1168~1-01aad]:main():gmm-latgen-faster.cc:176) Time taken 42.4039s: real-time factor assuming 100 frames/sec is 0.260355
+LOG (gmm-latgen-faster[5.5.1168~1-01aad]:main():gmm-latgen-faster.cc:176) Time taken 43.047s: real-time factor assuming 100 frames/sec is 0.264303
 LOG (gmm-latgen-faster[5.5.1168~1-01aad]:main():gmm-latgen-faster.cc:179) Done 37 utterances, failed for 0
 LOG (gmm-latgen-faster[5.5.1168~1-01aad]:main():gmm-latgen-faster.cc:181) Overall log-likelihood per frame is -7.07179 over 16287 frames.
 # Accounting: time=44 threads=1
-# Ended (code 0) at Wed Apr  2 16:15:11 EEST 2025, elapsed time 44 seconds
+# Ended (code 0) at Thu Apr  3 14:03:25 EEST 2025, elapsed time 44 seconds

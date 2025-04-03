@@ -1,9 +1,9 @@
 # gmm-latgen-faster --max-active=7000 --beam=13.0 --lattice-beam=6.0 --acoustic-scale=0.083333 --allow-partial=true --word-symbol-table=exp/mono/graph_bg/words.txt exp/mono/final.mdl exp/mono/graph_bg/HCLG.fst "ark,s,cs:apply-cmvn  --utt2spk=ark:data/test/split4/3/utt2spk scp:data/test/split4/3/cmvn.scp scp:data/test/split4/3/feats.scp ark:- | add-deltas  ark:- ark:- |" "ark:|gzip -c > exp/mono/decode_test_bg/lat.3.gz" 
-# Started at Wed Apr  2 16:25:20 EEST 2025
+# Started at Thu Apr  3 14:13:25 EEST 2025
 #
 gmm-latgen-faster --max-active=7000 --beam=13.0 --lattice-beam=6.0 --acoustic-scale=0.083333 --allow-partial=true --word-symbol-table=exp/mono/graph_bg/words.txt exp/mono/final.mdl exp/mono/graph_bg/HCLG.fst 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/test/split4/3/utt2spk scp:data/test/split4/3/cmvn.scp scp:data/test/split4/3/feats.scp ark:- | add-deltas  ark:- ark:- |' 'ark:|gzip -c > exp/mono/decode_test_bg/lat.3.gz' 
-apply-cmvn --utt2spk=ark:data/test/split4/3/utt2spk scp:data/test/split4/3/cmvn.scp scp:data/test/split4/3/feats.scp ark:- 
 add-deltas ark:- ark:- 
+apply-cmvn --utt2spk=ark:data/test/split4/3/utt2spk scp:data/test/split4/3/cmvn.scp scp:data/test/split4/3/feats.scp ark:- 
 m1_001 ih z ow z iy z iy f er ae s 
 LOG (gmm-latgen-faster[5.5.1168~1-01aad]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance m1_001 is -7.43911 over 200 frames.
 m1_006 t w ay y ah l ao r iy f r s l iy ay d ah m z 
@@ -172,11 +172,11 @@ m1_416 eh p ih p aa p ih s k aa p r d ih n d ih d
 LOG (gmm-latgen-faster[5.5.1168~1-01aad]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance m1_416 is -7.17541 over 408 frames.
 m1_421 s p ae n ih k aa sh ah n t er k w ih k ow f l 
 LOG (gmm-latgen-faster[5.5.1168~1-01aad]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance m1_421 is -7.27798 over 363 frames.
-LOG (apply-cmvn[5.5.1168~1-01aad]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 91 utterances, errors on 0
 m1_426 iy z iy g w ih ng z w ao l ah s k r l ae k s t r ah b w ey jh 
 LOG (gmm-latgen-faster[5.5.1168~1-01aad]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance m1_426 is -7.33176 over 507 frames.
 m1_431 aa p aa f ah p ao r uw z ey sh ah n t ah f r iy p r ah n b r ey z er z 
 LOG (gmm-latgen-faster[5.5.1168~1-01aad]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance m1_431 is -7.39359 over 467 frames.
+LOG (apply-cmvn[5.5.1168~1-01aad]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 91 utterances, errors on 0
 m1_436 er jh er ey f r iy k ah m iy k er z ow n f ay s ih ng 
 LOG (gmm-latgen-faster[5.5.1168~1-01aad]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance m1_436 is -7.27122 over 482 frames.
 m1_441 r aa k er w ih l iy z ih k ae z ih k r iy g r dh iy 
@@ -187,8 +187,8 @@ m1_451 t uw v er n t ih n k s m ah n iy f ah m p r l k s ah b l z ih ng
 LOG (gmm-latgen-faster[5.5.1168~1-01aad]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance m1_451 is -7.26901 over 513 frames.
 m1_456 m ao z ih g ae b l ao m p ae f r aa r ow z g aa r m 
 LOG (gmm-latgen-faster[5.5.1168~1-01aad]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance m1_456 is -7.17807 over 518 frames.
-LOG (gmm-latgen-faster[5.5.1168~1-01aad]:main():gmm-latgen-faster.cc:176) Time taken 19.875s: real-time factor assuming 100 frames/sec is 0.0510178
+LOG (gmm-latgen-faster[5.5.1168~1-01aad]:main():gmm-latgen-faster.cc:176) Time taken 19.2988s: real-time factor assuming 100 frames/sec is 0.0495388
 LOG (gmm-latgen-faster[5.5.1168~1-01aad]:main():gmm-latgen-faster.cc:179) Done 91 utterances, failed for 0
 LOG (gmm-latgen-faster[5.5.1168~1-01aad]:main():gmm-latgen-faster.cc:181) Overall log-likelihood per frame is -7.32404 over 38957 frames.
-# Accounting: time=21 threads=1
-# Ended (code 0) at Wed Apr  2 16:25:41 EEST 2025, elapsed time 21 seconds
+# Accounting: time=20 threads=1
+# Ended (code 0) at Thu Apr  3 14:13:45 EEST 2025, elapsed time 20 seconds

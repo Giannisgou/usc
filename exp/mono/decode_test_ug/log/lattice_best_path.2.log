@@ -1,8 +1,8 @@
 # lattice-depth-per-frame "ark:gunzip -c exp/mono/decode_test_ug/lat.2.gz|" "ark,t:|gzip -c > exp/mono/decode_test_ug/depth_tmp.2.gz" ark:- | lattice-best-path --acoustic-scale=0.1 ark:- ark:/dev/null "ark,t:|gzip -c >exp/mono/decode_test_ug/ali_tmp.2.gz" 
-# Started at Wed Apr  2 16:19:50 EEST 2025
+# Started at Thu Apr  3 14:08:03 EEST 2025
 #
-lattice-best-path --acoustic-scale=0.1 ark:- ark:/dev/null 'ark,t:|gzip -c >exp/mono/decode_test_ug/ali_tmp.2.gz' 
 lattice-depth-per-frame 'ark:gunzip -c exp/mono/decode_test_ug/lat.2.gz|' 'ark,t:|gzip -c > exp/mono/decode_test_ug/depth_tmp.2.gz' ark:- 
+lattice-best-path --acoustic-scale=0.1 ark:- ark:/dev/null 'ark,t:|gzip -c >exp/mono/decode_test_ug/ali_tmp.2.gz' 
 LOG (lattice-best-path[5.5.1168~1-01aad]:main():lattice-best-path.cc:99) For utterance f5_001, best cost 51.539 + 2175.68 = 2227.22 over 249 frames.
 LOG (lattice-best-path[5.5.1168~1-01aad]:main():lattice-best-path.cc:99) For utterance f5_006, best cost 91.8467 + 2906.82 = 2998.67 over 325 frames.
 LOG (lattice-best-path[5.5.1168~1-01aad]:main():lattice-best-path.cc:99) For utterance f5_011, best cost 84.1383 + 2631.33 = 2715.47 over 301 frames.
@@ -99,4 +99,4 @@ LOG (lattice-best-path[5.5.1168~1-01aad]:main():lattice-best-path.cc:99) For utt
 LOG (lattice-best-path[5.5.1168~1-01aad]:main():lattice-best-path.cc:124) Overall cost per frame is 9.12911 = 0.267384 [graph] + 8.86172 [acoustic] over 35474 frames.
 LOG (lattice-best-path[5.5.1168~1-01aad]:main():lattice-best-path.cc:128) Done 92 lattices, failed for 0
 # Accounting: time=8 threads=1
-# Ended (code 0) at Wed Apr  2 16:19:58 EEST 2025, elapsed time 8 seconds
+# Ended (code 0) at Thu Apr  3 14:08:11 EEST 2025, elapsed time 8 seconds

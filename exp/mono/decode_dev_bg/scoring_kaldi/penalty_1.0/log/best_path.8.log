@@ -1,5 +1,5 @@
 # lattice-scale --inv-acoustic-scale=8 "ark:gunzip -c exp/mono/decode_dev_bg/lat.*.gz|" ark:- | lattice-add-penalty --word-ins-penalty=1.0 ark:- ark:- | lattice-best-path --word-symbol-table=data/lang_test/words.txt ark:- ark,t:- | utils/int2sym.pl -f 2- data/lang_test/words.txt | cat > exp/mono/decode_dev_bg/scoring_kaldi/penalty_1.0/8.txt 
-# Started at Wed Apr  2 16:33:21 EEST 2025
+# Started at Thu Apr  3 14:21:34 EEST 2025
 #
 lattice-scale --inv-acoustic-scale=8 'ark:gunzip -c exp/mono/decode_dev_bg/lat.*.gz|' ark:- 
 lattice-best-path --word-symbol-table=data/lang_test/words.txt ark:- ark,t:- 
@@ -296,13 +296,13 @@ LOG (lattice-best-path[5.5.1168~1-01aad]:main():lattice-best-path.cc:99) For utt
 m3_414 ae t ih k aa b eh k ae t k y uw b ih r ah n t w eh 
 LOG (lattice-best-path[5.5.1168~1-01aad]:main():lattice-best-path.cc:99) For utterance m3_427, best cost 179.15 + 5917.53 = 6096.68 over 539 frames.
 m3_427 y ao th ih s ih d aw ah jh er hh aa p n eh n iy g aa m er s ay d r ah z 
-LOG (lattice-scale[5.5.1168~1-01aad]:main():lattice-scale.cc:107) Done 148 lattices.
 LOG (lattice-best-path[5.5.1168~1-01aad]:main():lattice-best-path.cc:99) For utterance m3_439, best cost 112.378 + 4343.33 = 4455.71 over 414 frames.
 m3_439 r ey d ow z aa f ih ng ih s t r ey n iy n z 
+LOG (lattice-scale[5.5.1168~1-01aad]:main():lattice-scale.cc:107) Done 148 lattices.
 LOG (lattice-add-penalty[5.5.1168~1-01aad]:main():lattice-add-penalty.cc:62) Done adding word insertion penalty to 148 lattices.
 LOG (lattice-best-path[5.5.1168~1-01aad]:main():lattice-best-path.cc:99) For utterance m3_452, best cost 139.88 + 5171.07 = 5310.95 over 482 frames.
 m3_452 dh iy b ah b ih ng aa t w aw er k ao r f r d ih f r ow zh hh 
 LOG (lattice-best-path[5.5.1168~1-01aad]:main():lattice-best-path.cc:124) Overall cost per frame is 10.7278 = 0.29492 [graph] + 10.4329 [acoustic] over 67105 frames.
 LOG (lattice-best-path[5.5.1168~1-01aad]:main():lattice-best-path.cc:128) Done 148 lattices, failed for 0
 # Accounting: time=11 threads=1
-# Ended (code 0) at Wed Apr  2 16:33:32 EEST 2025, elapsed time 11 seconds
+# Ended (code 0) at Thu Apr  3 14:21:45 EEST 2025, elapsed time 11 seconds

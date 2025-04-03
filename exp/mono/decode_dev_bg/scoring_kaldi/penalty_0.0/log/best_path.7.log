@@ -1,9 +1,9 @@
 # lattice-scale --inv-acoustic-scale=7 "ark:gunzip -c exp/mono/decode_dev_bg/lat.*.gz|" ark:- | lattice-add-penalty --word-ins-penalty=0.0 ark:- ark:- | lattice-best-path --word-symbol-table=data/lang_test/words.txt ark:- ark,t:- | utils/int2sym.pl -f 2- data/lang_test/words.txt | cat > exp/mono/decode_dev_bg/scoring_kaldi/penalty_0.0/7.txt 
-# Started at Wed Apr  2 16:32:57 EEST 2025
+# Started at Thu Apr  3 14:21:09 EEST 2025
 #
-lattice-add-penalty --word-ins-penalty=0.0 ark:- ark:- 
 lattice-scale --inv-acoustic-scale=7 'ark:gunzip -c exp/mono/decode_dev_bg/lat.*.gz|' ark:- 
 lattice-best-path --word-symbol-table=data/lang_test/words.txt ark:- ark,t:- 
+lattice-add-penalty --word-ins-penalty=0.0 ark:- ark:- 
 LOG (lattice-best-path[5.5.1168~1-01aad]:main():lattice-best-path.cc:99) For utterance f1_002, best cost 107.595 + 4437.19 = 4544.78 over 377 frames.
 f1_002 jh ih ng ey er m ao r m ah n iy b er r k ah ng hh er 
 LOG (lattice-best-path[5.5.1168~1-01aad]:main():lattice-best-path.cc:99) For utterance f1_014, best cost 89.6731 + 4165.73 = 4255.41 over 356 frames.
@@ -304,5 +304,5 @@ LOG (lattice-best-path[5.5.1168~1-01aad]:main():lattice-best-path.cc:99) For utt
 m3_452 dh iy b ah b ih ng aa t w aw er th k ao r f r ay d ih z f r ow zh hh 
 LOG (lattice-best-path[5.5.1168~1-01aad]:main():lattice-best-path.cc:124) Overall cost per frame is 12.1646 = 0.268211 [graph] + 11.8964 [acoustic] over 67105 frames.
 LOG (lattice-best-path[5.5.1168~1-01aad]:main():lattice-best-path.cc:128) Done 148 lattices, failed for 0
-# Accounting: time=10 threads=1
-# Ended (code 0) at Wed Apr  2 16:33:07 EEST 2025, elapsed time 10 seconds
+# Accounting: time=12 threads=1
+# Ended (code 0) at Thu Apr  3 14:21:21 EEST 2025, elapsed time 12 seconds

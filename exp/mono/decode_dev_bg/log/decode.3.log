@@ -1,9 +1,9 @@
 # gmm-latgen-faster --max-active=7000 --beam=13.0 --lattice-beam=6.0 --acoustic-scale=0.083333 --allow-partial=true --word-symbol-table=exp/mono/graph_bg/words.txt exp/mono/final.mdl exp/mono/graph_bg/HCLG.fst "ark,s,cs:apply-cmvn  --utt2spk=ark:data/dev/split4/3/utt2spk scp:data/dev/split4/3/cmvn.scp scp:data/dev/split4/3/feats.scp ark:- | add-deltas  ark:- ark:- |" "ark:|gzip -c > exp/mono/decode_dev_bg/lat.3.gz" 
-# Started at Wed Apr  2 16:24:18 EEST 2025
+# Started at Thu Apr  3 14:12:23 EEST 2025
 #
 gmm-latgen-faster --max-active=7000 --beam=13.0 --lattice-beam=6.0 --acoustic-scale=0.083333 --allow-partial=true --word-symbol-table=exp/mono/graph_bg/words.txt exp/mono/final.mdl exp/mono/graph_bg/HCLG.fst 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/dev/split4/3/utt2spk scp:data/dev/split4/3/cmvn.scp scp:data/dev/split4/3/feats.scp ark:- | add-deltas  ark:- ark:- |' 'ark:|gzip -c > exp/mono/decode_dev_bg/lat.3.gz' 
-apply-cmvn --utt2spk=ark:data/dev/split4/3/utt2spk scp:data/dev/split4/3/cmvn.scp scp:data/dev/split4/3/feats.scp ark:- 
 add-deltas ark:- ark:- 
+apply-cmvn --utt2spk=ark:data/dev/split4/3/utt2spk scp:data/dev/split4/3/cmvn.scp scp:data/dev/split4/3/feats.scp ark:- 
 m1_002 ch ih m ay r m ao m ah n iy b ay w ih s ih k aa r 
 LOG (gmm-latgen-faster[5.5.1168~1-01aad]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance m1_002 is -7.30441 over 354 frames.
 m1_014 er w ih l w ao r l ey n uw dh iy w l 
@@ -79,8 +79,8 @@ m1_444 r aa m ey z hh ae n d r iy n t uw aa f r d ih n er ey n k uw s p r iy p a
 LOG (gmm-latgen-faster[5.5.1168~1-01aad]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance m1_444 is -7.08808 over 646 frames.
 m1_457 k aa f iy z g r ow n s t iy jh ah n k l ay k s l t ah n t ah p r t ow n z 
 LOG (gmm-latgen-faster[5.5.1168~1-01aad]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance m1_457 is -7.19377 over 622 frames.
-LOG (gmm-latgen-faster[5.5.1168~1-01aad]:main():gmm-latgen-faster.cc:176) Time taken 8.58401s: real-time factor assuming 100 frames/sec is 0.0483361
+LOG (gmm-latgen-faster[5.5.1168~1-01aad]:main():gmm-latgen-faster.cc:176) Time taken 8.24938s: real-time factor assuming 100 frames/sec is 0.0464518
 LOG (gmm-latgen-faster[5.5.1168~1-01aad]:main():gmm-latgen-faster.cc:179) Done 37 utterances, failed for 0
 LOG (gmm-latgen-faster[5.5.1168~1-01aad]:main():gmm-latgen-faster.cc:181) Overall log-likelihood per frame is -7.06095 over 17759 frames.
 # Accounting: time=9 threads=1
-# Ended (code 0) at Wed Apr  2 16:24:28 EEST 2025, elapsed time 9 seconds
+# Ended (code 0) at Thu Apr  3 14:12:33 EEST 2025, elapsed time 9 seconds

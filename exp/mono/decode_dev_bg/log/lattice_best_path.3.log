@@ -1,5 +1,5 @@
 # lattice-depth-per-frame "ark:gunzip -c exp/mono/decode_dev_bg/lat.3.gz|" "ark,t:|gzip -c > exp/mono/decode_dev_bg/depth_tmp.3.gz" ark:- | lattice-best-path --acoustic-scale=0.1 ark:- ark:/dev/null "ark,t:|gzip -c >exp/mono/decode_dev_bg/ali_tmp.3.gz" 
-# Started at Wed Apr  2 16:24:34 EEST 2025
+# Started at Thu Apr  3 14:12:38 EEST 2025
 #
 lattice-depth-per-frame 'ark:gunzip -c exp/mono/decode_dev_bg/lat.3.gz|' 'ark,t:|gzip -c > exp/mono/decode_dev_bg/depth_tmp.3.gz' ark:- 
 lattice-best-path --acoustic-scale=0.1 ark:- ark:/dev/null 'ark,t:|gzip -c >exp/mono/decode_dev_bg/ali_tmp.3.gz' 
@@ -44,4 +44,4 @@ LOG (lattice-best-path[5.5.1168~1-01aad]:main():lattice-best-path.cc:99) For utt
 LOG (lattice-best-path[5.5.1168~1-01aad]:main():lattice-best-path.cc:124) Overall cost per frame is 8.42474 = 0.248842 [graph] + 8.1759 [acoustic] over 17759 frames.
 LOG (lattice-best-path[5.5.1168~1-01aad]:main():lattice-best-path.cc:128) Done 37 lattices, failed for 0
 # Accounting: time=2 threads=1
-# Ended (code 0) at Wed Apr  2 16:24:36 EEST 2025, elapsed time 2 seconds
+# Ended (code 0) at Thu Apr  3 14:12:41 EEST 2025, elapsed time 2 seconds

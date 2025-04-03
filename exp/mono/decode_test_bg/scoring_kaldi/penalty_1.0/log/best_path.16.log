@@ -1,5 +1,5 @@
 # lattice-scale --inv-acoustic-scale=16 "ark:gunzip -c exp/mono/decode_test_bg/lat.*.gz|" ark:- | lattice-add-penalty --word-ins-penalty=1.0 ark:- ark:- | lattice-best-path --word-symbol-table=data/lang_test/words.txt ark:- ark,t:- | utils/int2sym.pl -f 2- data/lang_test/words.txt | cat > exp/mono/decode_test_bg/scoring_kaldi/penalty_1.0/16.txt 
-# Started at Wed Apr  2 16:34:24 EEST 2025
+# Started at Thu Apr  3 14:22:37 EEST 2025
 #
 lattice-best-path --word-symbol-table=data/lang_test/words.txt ark:- ark,t:- 
 lattice-add-penalty --word-ins-penalty=1.0 ark:- ark:- 
@@ -734,13 +734,13 @@ LOG (lattice-best-path[5.5.1168~1-01aad]:main():lattice-best-path.cc:99) For utt
 m3_441 r aa k ah l iy z ih k r eh k uh 
 LOG (lattice-best-path[5.5.1168~1-01aad]:main():lattice-best-path.cc:99) For utterance m3_446, best cost 106.439 + 1936.8 = 2043.24 over 355 frames.
 m3_446 s iy s ah d ow z iy m ay t iy g ae m ah n 
-LOG (lattice-scale[5.5.1168~1-01aad]:main():lattice-scale.cc:107) Done 367 lattices.
 LOG (lattice-best-path[5.5.1168~1-01aad]:main():lattice-best-path.cc:99) For utterance m3_451, best cost 119.253 + 2703.32 = 2822.58 over 472 frames.
 m3_451 t ah n ih n s uw m ah n iy f r ow z ah l z ih ng 
+LOG (lattice-scale[5.5.1168~1-01aad]:main():lattice-scale.cc:107) Done 367 lattices.
 LOG (lattice-add-penalty[5.5.1168~1-01aad]:main():lattice-add-penalty.cc:62) Done adding word insertion penalty to 367 lattices.
 LOG (lattice-best-path[5.5.1168~1-01aad]:main():lattice-best-path.cc:99) For utterance m3_456, best cost 118.811 + 2420.43 = 2539.25 over 429 frames.
 m3_456 ah m ao th ih g ae g ow n ah p ae f r aw s ah n 
 LOG (lattice-best-path[5.5.1168~1-01aad]:main():lattice-best-path.cc:124) Overall cost per frame is 5.75326 = 0.254746 [graph] + 5.49851 [acoustic] over 145641 frames.
 LOG (lattice-best-path[5.5.1168~1-01aad]:main():lattice-best-path.cc:128) Done 367 lattices, failed for 0
-# Accounting: time=22 threads=1
-# Ended (code 0) at Wed Apr  2 16:34:47 EEST 2025, elapsed time 22 seconds
+# Accounting: time=23 threads=1
+# Ended (code 0) at Thu Apr  3 14:23:00 EEST 2025, elapsed time 23 seconds

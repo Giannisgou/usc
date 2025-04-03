@@ -1,5 +1,5 @@
 # lattice-scale --inv-acoustic-scale=10 "ark:gunzip -c exp/mono/decode_test_bg/lat.*.gz|" ark:- | lattice-add-penalty --word-ins-penalty=0.5 ark:- ark:- | lattice-best-path --word-symbol-table=data/lang_test/words.txt ark:- ark,t:- | utils/int2sym.pl -f 2- data/lang_test/words.txt | cat > exp/mono/decode_test_bg/scoring_kaldi/penalty_0.5/10.txt 
-# Started at Wed Apr  2 16:34:00 EEST 2025
+# Started at Thu Apr  3 14:22:13 EEST 2025
 #
 lattice-best-path --word-symbol-table=data/lang_test/words.txt ark:- ark,t:- 
 lattice-add-penalty --word-ins-penalty=0.5 ark:- ark:- 
@@ -734,13 +734,13 @@ LOG (lattice-best-path[5.5.1168~1-01aad]:main():lattice-best-path.cc:99) For utt
 m3_441 r aa k ah m ow n iy z ih k ah z ih g r eh k r ah m 
 LOG (lattice-best-path[5.5.1168~1-01aad]:main():lattice-best-path.cc:99) For utterance m3_446, best cost 106.847 + 3087.53 = 3194.38 over 355 frames.
 m3_446 iy s t iy s ah d ow z iy m ay d iy g ae m ah n ih 
+LOG (lattice-scale[5.5.1168~1-01aad]:main():lattice-scale.cc:107) Done 367 lattices.
 LOG (lattice-best-path[5.5.1168~1-01aad]:main():lattice-best-path.cc:99) For utterance m3_451, best cost 139.185 + 4283.42 = 4422.61 over 472 frames.
 m3_451 s t ah v er f ih ng ih n s uw m ah n iy f r l s ah l ah n z ah d ih ng 
-LOG (lattice-scale[5.5.1168~1-01aad]:main():lattice-scale.cc:107) Done 367 lattices.
 LOG (lattice-add-penalty[5.5.1168~1-01aad]:main():lattice-add-penalty.cc:62) Done adding word insertion penalty to 367 lattices.
 LOG (lattice-best-path[5.5.1168~1-01aad]:main():lattice-best-path.cc:99) For utterance m3_456, best cost 130.673 + 3840.51 = 3971.19 over 429 frames.
 m3_456 ah m ao th ih g ae g ow l ao ng ah p ae f r aw s p aa r n t 
 LOG (lattice-best-path[5.5.1168~1-01aad]:main():lattice-best-path.cc:124) Overall cost per frame is 9.01207 = 0.297595 [graph] + 8.71448 [acoustic] over 145641 frames.
 LOG (lattice-best-path[5.5.1168~1-01aad]:main():lattice-best-path.cc:128) Done 367 lattices, failed for 0
-# Accounting: time=22 threads=1
-# Ended (code 0) at Wed Apr  2 16:34:22 EEST 2025, elapsed time 22 seconds
+# Accounting: time=23 threads=1
+# Ended (code 0) at Thu Apr  3 14:22:36 EEST 2025, elapsed time 23 seconds

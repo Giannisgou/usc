@@ -1,9 +1,9 @@
 # lattice-scale --inv-acoustic-scale=12 "ark:gunzip -c exp/mono/decode_dev_bg/lat.*.gz|" ark:- | lattice-add-penalty --word-ins-penalty=1.0 ark:- ark:- | lattice-best-path --word-symbol-table=data/lang_test/words.txt ark:- ark,t:- | utils/int2sym.pl -f 2- data/lang_test/words.txt | cat > exp/mono/decode_dev_bg/scoring_kaldi/penalty_1.0/12.txt 
-# Started at Wed Apr  2 16:33:21 EEST 2025
+# Started at Thu Apr  3 14:21:34 EEST 2025
 #
 lattice-best-path --word-symbol-table=data/lang_test/words.txt ark:- ark,t:- 
-lattice-add-penalty --word-ins-penalty=1.0 ark:- ark:- 
 lattice-scale --inv-acoustic-scale=12 'ark:gunzip -c exp/mono/decode_dev_bg/lat.*.gz|' ark:- 
+lattice-add-penalty --word-ins-penalty=1.0 ark:- ark:- 
 LOG (lattice-best-path[5.5.1168~1-01aad]:main():lattice-best-path.cc:99) For utterance f1_002, best cost 115.506 + 2597.51 = 2713.01 over 377 frames.
 f1_002 jh ih ng ey er m ao r m ay b er r ih ng hh er 
 LOG (lattice-best-path[5.5.1168~1-01aad]:main():lattice-best-path.cc:99) For utterance f1_014, best cost 85.332 + 2445.39 = 2530.72 over 356 frames.
@@ -296,13 +296,13 @@ LOG (lattice-best-path[5.5.1168~1-01aad]:main():lattice-best-path.cc:99) For utt
 m3_414 ae t ih k aa b eh k ae t iy b ih r ah n t uw 
 LOG (lattice-best-path[5.5.1168~1-01aad]:main():lattice-best-path.cc:99) For utterance m3_427, best cost 147.731 + 3971.49 = 4119.23 over 539 frames.
 m3_427 y ao th ih s ih d aa jh er hh aa n ih ng aa m er s ay er z 
-LOG (lattice-scale[5.5.1168~1-01aad]:main():lattice-scale.cc:107) Done 148 lattices.
 LOG (lattice-best-path[5.5.1168~1-01aad]:main():lattice-best-path.cc:99) For utterance m3_439, best cost 107.305 + 2900.02 = 3007.32 over 414 frames.
 m3_439 r ey t ow z aa f ah n ih s er ey n iy n z 
+LOG (lattice-scale[5.5.1168~1-01aad]:main():lattice-scale.cc:107) Done 148 lattices.
+LOG (lattice-add-penalty[5.5.1168~1-01aad]:main():lattice-add-penalty.cc:62) Done adding word insertion penalty to 148 lattices.
 LOG (lattice-best-path[5.5.1168~1-01aad]:main():lattice-best-path.cc:99) For utterance m3_452, best cost 129.436 + 3456.29 = 3585.73 over 482 frames.
 m3_452 dh iy b ah b ih ng ah t w aw er k er f r ah f r ow zh hh 
-LOG (lattice-add-penalty[5.5.1168~1-01aad]:main():lattice-add-penalty.cc:62) Done adding word insertion penalty to 148 lattices.
 LOG (lattice-best-path[5.5.1168~1-01aad]:main():lattice-best-path.cc:124) Overall cost per frame is 7.2424 = 0.247042 [graph] + 6.99536 [acoustic] over 67105 frames.
 LOG (lattice-best-path[5.5.1168~1-01aad]:main():lattice-best-path.cc:128) Done 148 lattices, failed for 0
 # Accounting: time=11 threads=1
-# Ended (code 0) at Wed Apr  2 16:33:32 EEST 2025, elapsed time 11 seconds
+# Ended (code 0) at Thu Apr  3 14:21:45 EEST 2025, elapsed time 11 seconds

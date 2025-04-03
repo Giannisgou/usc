@@ -1,5 +1,5 @@
 # gunzip -c exp/mono/decode_test_ug/phone_stats.*.gz | steps/diagnostic/analyze_phone_length_stats.py exp/mono/graph_ug 
-# Started at Wed Apr  2 16:19:59 EEST 2025
+# Started at Thu Apr  3 14:08:12 EEST 2025
 #
 At utterance begin, sil accounts for 98.4% of phone occurrences, with duration (median, mean, 95-percentile) is (46,47.9,76) frames.
 At utterance begin, nonsilence accounts for 1.6% of phone occurrences, with duration (median, mean, 95-percentile) is (8,9.0,10) frames.
@@ -47,4 +47,4 @@ Limiting the stats to the 60.0% of frames not covered by an utterance-[begin/end
 Assuming 100 frames per second, the alignments represent 0.4 hours of data, or 0.2 hours if sil frames are excluded.
 Utterance-internal optional-silences sil comprise 3.6% of utterance-internal phones, with duration (median, mean, 95-percentile) = (12,21.9,58)
 # Accounting: time=0 threads=1
-# Ended (code 0) at Wed Apr  2 16:19:59 EEST 2025, elapsed time 0 seconds
+# Ended (code 0) at Thu Apr  3 14:08:12 EEST 2025, elapsed time 0 seconds
