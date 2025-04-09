@@ -1,5 +1,5 @@
 # gmm-est --mix-up=12120 --power=0.25 --write-occs=exp/tri_deltas/21.occs exp/tri_deltas/20.mdl "gmm-sum-accs - exp/tri_deltas/20.*.acc |" exp/tri_deltas/21.mdl 
-# Started at Thu Apr  3 13:57:34 EEST 2025
+# Started at Wed Apr  9 14:15:27 EEST 2025
 #
 gmm-est --mix-up=12120 --power=0.25 --write-occs=exp/tri_deltas/21.occs exp/tri_deltas/20.mdl 'gmm-sum-accs - exp/tri_deltas/20.*.acc |' exp/tri_deltas/21.mdl 
 gmm-sum-accs - exp/tri_deltas/20.1.acc exp/tri_deltas/20.2.acc exp/tri_deltas/20.3.acc exp/tri_deltas/20.4.acc 
@@ -24,5 +24,5 @@ LOG (gmm-est[5.5.1168~1-01aad]:main():gmm-est.cc:113) GMM update: Overall 0.1456
 LOG (gmm-est[5.5.1168~1-01aad]:main():gmm-est.cc:116) GMM update: Overall avg like per frame = -78.5553 over 596144 frames.
 LOG (gmm-est[5.5.1168~1-01aad]:SplitByCount():am-diag-gmm.cc:116) Split 968 states with target = 12120, power = 0.25, perturb_factor = 0.01 and min_count = 20, split #Gauss from 11639 to 12143
 LOG (gmm-est[5.5.1168~1-01aad]:main():gmm-est.cc:146) Written model to exp/tri_deltas/21.mdl
-# Accounting: time=1 threads=1
-# Ended (code 0) at Thu Apr  3 13:57:35 EEST 2025, elapsed time 1 seconds
+# Accounting: time=0 threads=1
+# Ended (code 0) at Wed Apr  9 14:15:27 EEST 2025, elapsed time 0 seconds

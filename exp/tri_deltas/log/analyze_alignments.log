@@ -1,5 +1,5 @@
 # gunzip -c exp/tri_deltas/phone_stats.*.gz | steps/diagnostic/analyze_phone_length_stats.py data/lang 
-# Started at Thu Apr  3 13:58:15 EEST 2025
+# Started at Wed Apr  9 14:16:06 EEST 2025
 #
 analyze_phone_length_stats.py: WARNING: optional-silence sil is seen only 25.742574257425744% of the time at utterance begin.  This may not be optimal.
 analyze_phone_length_stats.py: WARNING: optional-silence sil is seen only 26.961157654226962% of the time at utterance end.  This may not be optimal.
@@ -53,4 +53,4 @@ Limiting the stats to the 62.2% of frames not covered by an utterance-[begin/end
 Assuming 100 frames per second, the alignments represent 1.7 hours of data, or 1.4 hours if sil frames are excluded.
 Utterance-internal optional-silences sil comprise 5.3% of utterance-internal phones, with duration (median, mean, 95-percentile) = (12,23.2,73)
 # Accounting: time=0 threads=1
-# Ended (code 0) at Thu Apr  3 13:58:15 EEST 2025, elapsed time 0 seconds
+# Ended (code 0) at Wed Apr  9 14:16:06 EEST 2025, elapsed time 0 seconds

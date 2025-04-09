@@ -1,5 +1,5 @@
 # gmm-align-compiled --transition-scale=1.0 --acoustic-scale=0.1 --self-loop-scale=0.1 --beam=10 --retry-beam=40 --careful=false "gmm-boost-silence --boost=1.0 1 exp/tri_deltas/30.mdl - |" "ark:gunzip -c exp/tri_deltas/fsts.3.gz|" "ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split4/3/utt2spk scp:data/train/split4/3/cmvn.scp scp:data/train/split4/3/feats.scp ark:- | add-deltas  ark:- ark:- |" "ark:|gzip -c >exp/tri_deltas/ali.3.gz" 
-# Started at Thu Apr  3 13:57:56 EEST 2025
+# Started at Wed Apr  9 14:15:48 EEST 2025
 #
 gmm-align-compiled --transition-scale=1.0 --acoustic-scale=0.1 --self-loop-scale=0.1 --beam=10 --retry-beam=40 --careful=false 'gmm-boost-silence --boost=1.0 1 exp/tri_deltas/30.mdl - |' 'ark:gunzip -c exp/tri_deltas/fsts.3.gz|' 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split4/3/utt2spk scp:data/train/split4/3/cmvn.scp scp:data/train/split4/3/feats.scp ark:- | add-deltas  ark:- ark:- |' 'ark:|gzip -c >exp/tri_deltas/ali.3.gz' 
 gmm-boost-silence --boost=1.0 1 exp/tri_deltas/30.mdl - 
@@ -343,4 +343,4 @@ LOG (gmm-align-compiled[5.5.1168~1-01aad]:main():gmm-align-compiled.cc:135) Over
 LOG (gmm-align-compiled[5.5.1168~1-01aad]:main():gmm-align-compiled.cc:137) Retried 3 out of 327 utterances.
 LOG (gmm-align-compiled[5.5.1168~1-01aad]:main():gmm-align-compiled.cc:139) Done 327, errors on 0
 # Accounting: time=4 threads=1
-# Ended (code 0) at Thu Apr  3 13:58:00 EEST 2025, elapsed time 4 seconds
+# Ended (code 0) at Wed Apr  9 14:15:52 EEST 2025, elapsed time 4 seconds

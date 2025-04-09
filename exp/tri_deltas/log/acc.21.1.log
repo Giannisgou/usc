@@ -1,9 +1,9 @@
 # gmm-acc-stats-ali exp/tri_deltas/21.mdl "ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split4/1/utt2spk scp:data/train/split4/1/cmvn.scp scp:data/train/split4/1/feats.scp ark:- | add-deltas  ark:- ark:- |" "ark,s,cs:gunzip -c exp/tri_deltas/ali.1.gz|" exp/tri_deltas/21.1.acc 
-# Started at Thu Apr  3 13:57:35 EEST 2025
+# Started at Wed Apr  9 14:15:27 EEST 2025
 #
 gmm-acc-stats-ali exp/tri_deltas/21.mdl 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split4/1/utt2spk scp:data/train/split4/1/cmvn.scp scp:data/train/split4/1/feats.scp ark:- | add-deltas  ark:- ark:- |' 'ark,s,cs:gunzip -c exp/tri_deltas/ali.1.gz|' exp/tri_deltas/21.1.acc 
-add-deltas ark:- ark:- 
 apply-cmvn --utt2spk=ark:data/train/split4/1/utt2spk scp:data/train/split4/1/cmvn.scp scp:data/train/split4/1/feats.scp ark:- 
+add-deltas ark:- ark:- 
 LOG (gmm-acc-stats-ali[5.5.1168~1-01aad]:main():gmm-acc-stats-ali.cc:105) Processed 50 utterances; for utterance f1_070 avg. like is -76.0223 over 417 frames.
 LOG (gmm-acc-stats-ali[5.5.1168~1-01aad]:main():gmm-acc-stats-ali.cc:105) Processed 100 utterances; for utterance f1_140 avg. like is -77.7266 over 461 frames.
 LOG (gmm-acc-stats-ali[5.5.1168~1-01aad]:main():gmm-acc-stats-ali.cc:105) Processed 150 utterances; for utterance f1_209 avg. like is -73.9923 over 339 frames.
@@ -15,4 +15,4 @@ LOG (gmm-acc-stats-ali[5.5.1168~1-01aad]:main():gmm-acc-stats-ali.cc:112) Done 3
 LOG (gmm-acc-stats-ali[5.5.1168~1-01aad]:main():gmm-acc-stats-ali.cc:115) Overall avg like per frame (Gaussian only) = -76.372 over 147982 frames.
 LOG (gmm-acc-stats-ali[5.5.1168~1-01aad]:main():gmm-acc-stats-ali.cc:123) Written accs.
 # Accounting: time=1 threads=1
-# Ended (code 0) at Thu Apr  3 13:57:36 EEST 2025, elapsed time 1 seconds
+# Ended (code 0) at Wed Apr  9 14:15:29 EEST 2025, elapsed time 1 seconds

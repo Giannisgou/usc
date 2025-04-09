@@ -1,5 +1,5 @@
 # build-tree --verbose=1 --max-leaves=3000 --cluster-thresh=-1 exp/tri_deltas/treeacc data/lang/phones/roots.int exp/tri_deltas/questions.qst data/lang/topo exp/tri_deltas/tree 
-# Started at Thu Apr  3 13:56:33 EEST 2025
+# Started at Wed Apr  9 14:14:24 EEST 2025
 #
 build-tree --verbose=1 --max-leaves=3000 --cluster-thresh=-1 exp/tri_deltas/treeacc data/lang/phones/roots.int exp/tri_deltas/questions.qst data/lang/topo exp/tri_deltas/tree 
 LOG (build-tree[5.5.1168~1-01aad]:main():build-tree.cc:104) Number of separate statistics is 17528
@@ -86,5 +86,5 @@ VLOG[1] (build-tree[5.5.1168~1-01aad]:main():build-tree.cc:143) For pdf-id 840, 
 VLOG[1] (build-tree[5.5.1168~1-01aad]:main():build-tree.cc:143) For pdf-id 855, low count 85
 WARNING (build-tree[5.5.1168~1-01aad]:main():build-tree.cc:185) Saw no stats for following phones: 2 3 4 5 6 7 8 9 10 11 12 14 15 16 18 19 20 22 23 24 26 27 28 30 31 32 34 35 36 38 39 40 42 43 44 46 47 48 50 51 52 54 55 56 58 59 60 62 63 64 66 67 68 70 71 72 74 75 76 78 79 80 82 83 84 86 87 88 90 91 92 94 95 96 98 99 100 102 103 104 106 107 108 110 111 112 114 115 116 118 119 120 122 123 124 126 127 128 130 131 132 134 135 136 138 139 140 142 143 144 146 147 148 150 151 152 154 155 156 158 159 160 162 163 164 166 167 168 
 LOG (build-tree[5.5.1168~1-01aad]:main():build-tree.cc:189) Wrote tree
-# Accounting: time=3 threads=1
-# Ended (code 0) at Thu Apr  3 13:56:36 EEST 2025, elapsed time 3 seconds
+# Accounting: time=2 threads=1
+# Ended (code 0) at Wed Apr  9 14:14:26 EEST 2025, elapsed time 2 seconds

@@ -8,40 +8,56 @@ echo "Αντιγραφή score.sh από ../wsj/s5/local/score.sh στο ./local
 mkdir -p local
 cp ../wsj/s5/local/score.sh local/score.sh
 
-# Βήμα 2: Alignment χρησιμοποιώντας το monophone μοντέλο.
+# Βήμα 2: Alignment χρησιμοποιώντας το monophone μοντέλο
 echo "=== Εκτέλεση alignment με το monophone μοντέλο ==="
 steps/align_si.sh --nj 4 --cmd run.pl data/train data/lang exp/mono exp/mono_ali || exit 1
 
-# Βήμα 3: Εκπαίδευση triphone μοντέλου (με deltas) χρησιμοποιώντας τα alignments.
+# Βήμα 3: Εκπαίδευση triphone μοντέλου
 echo "=== Εκπαίδευση triphone μοντέλου (deltas) ==="
 steps/train_deltas.sh --cmd run.pl 3000 15000 data/train data/lang exp/mono_ali exp/tri_deltas || exit 1
 
-# Βήμα 4: Δημιουργία του HCLG γράφου για το triphone μοντέλο.
-echo "=== Δημιουργία HCLG γράφου για το triphone μοντέλο ==="
-utils/mkgraph.sh data/lang exp/tri_deltas exp/tri_deltas/graph || exit 1
+##############################
+#   UNIGRAM GRAPH + DECODE  #
+##############################
+echo "=== Δημιουργία HCLG γράφου για Triphone + Unigram ==="
+cp data/lang_test/G_ug.fst data/lang_test/G.fst
+utils/mkgraph.sh data/lang_test exp/tri_deltas exp/tri_deltas/graph_ug || exit 1
 
-# Βήμα 5: Decoding για το dev set.
-echo "=== Decoding για το dev set με το triphone μοντέλο ==="
-steps/decode.sh --nj 4 --cmd run.pl exp/tri_deltas/graph data/dev exp/tri_deltas/decode_dev || exit 1
+echo "=== Decoding (Unigram) για dev set ==="
+steps/decode.sh --nj 4 --cmd run.pl exp/tri_deltas/graph_ug data/dev exp/tri_deltas/decode_dev_ug || exit 1
 
-# Decoding για το test set.
-echo "=== Decoding για το test set με το triphone μοντέλο ==="
-steps/decode.sh --nj 4 --cmd run.pl exp/tri_deltas/graph data/test exp/tri_deltas/decode_test || exit 1
+echo "=== Decoding (Unigram) για test set ==="
+steps/decode.sh --nj 4 --cmd run.pl exp/tri_deltas/graph_ug data/test exp/tri_deltas/decode_test_ug || exit 1
 
-# Βήμα 6: Scoring - Υπολογισμός PER.
-echo "=== Αποτελέσματα PER για το dev set ==="
-./local/score.sh data/dev data/lang exp/tri_deltas/decode_dev
+##############################
+#   BIGRAM GRAPH + DECODE   #
+##############################
+echo "=== Δημιουργία HCLG γράφου για Triphone + Bigram ==="
+cp data/lang_test/G_bg.fst data/lang_test/G.fst
+utils/mkgraph.sh data/lang_test exp/tri_deltas exp/tri_deltas/graph_bg || exit 1
 
-echo "=== Αποτελέσματα PER για το test set ==="
-./local/score.sh data/test data/lang exp/tri_deltas/decode_test
+echo "=== Decoding (Bigram) για dev set ==="
+steps/decode.sh --nj 4 --cmd run.pl exp/tri_deltas/graph_bg data/dev exp/tri_deltas/decode_dev_bg || exit 1
+
+echo "=== Decoding (Bigram) για test set ==="
+steps/decode.sh --nj 4 --cmd run.pl exp/tri_deltas/graph_bg data/test exp/tri_deltas/decode_test_bg || exit 1
+
+###########################
+#   SCORING (PER)        #
+###########################
+echo ""
+echo "=== Αποτελέσματα PER για Triphone + Unigram ==="
+echo "Dev set:"
+./local/score.sh data/dev data/lang_test exp/tri_deltas/decode_dev_ug
+echo "Test set:"
+./local/score.sh data/test data/lang_test exp/tri_deltas/decode_test_ug
 
 echo ""
-echo "Η διαδικασία alignment, εκπαίδευσης, graph building, decoding και scoring για το triphone μοντέλο ολοκληρώθηκε επιτυχώς!"
+echo "=== Αποτελέσματα PER για Triphone + Bigram ==="
+echo "Dev set:"
+./local/score.sh data/dev data/lang_test exp/tri_deltas/decode_dev_bg
+echo "Test set:"
+./local/score.sh data/test data/lang_test exp/tri_deltas/decode_test_bg
 
-# Σημείωση:
-# Οι δύο υπερπαράμετροι του scoring που ρυθμίζονται στο local/score.sh είναι:
-#   1. LM weight (lmwt): Ορίζει την επιρροή του γλωσσικού μοντέλου στο συνολικό σκορ.
-#   2. Word insertion penalty (wip): Ρυθμίζει την ποινή εισαγωγής λέξης,
-#      επηρεάζοντας τον αριθμό των λέξεων στο αποκωδικοποιημένο αποτέλεσμα.
-# Οι βέλτιστες τιμές αυτών των παραμέτρων εμφανίζονται στα αποτελέσματα που παράγει το local/score.sh
-# (συνήθως μέσα από ένα αρχείο όπως best_wer στο φάκελο scoring_kaldi).
+echo ""
+echo "🎯 Ολοκληρώθηκε: Alignment, εκπαίδευση triphone, δημιουργία γράφων, αποκωδικοποίηση και scoring για UG & BG!"

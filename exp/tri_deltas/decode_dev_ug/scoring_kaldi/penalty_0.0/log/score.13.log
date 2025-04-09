@@ -1,0 +1,5 @@
+# cat exp/tri_deltas/decode_dev_ug/scoring_kaldi/penalty_0.0/13.txt | compute-wer --text --mode=present ark:exp/tri_deltas/decode_dev_ug/scoring_kaldi/test_filt.txt ark,p:- >& exp/tri_deltas/decode_dev_ug/wer_13_0.0 
+# Started at Wed Apr  9 14:20:39 EEST 2025
+#
+# Accounting: time=1 threads=1
+# Ended (code 0) at Wed Apr  9 14:20:40 EEST 2025, elapsed time 1 seconds

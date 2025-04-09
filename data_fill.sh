@@ -13,10 +13,6 @@
 #   - Στο αρχείο text, για κάθε utterance_id εξάγεται το numeric κομμάτι (π.χ. "003") και γίνεται αναζήτηση
 #     στο files/transcriptions.txt (γραμμές της μορφής "003<TAB>Transcription...") ώστε να αντιστοιχιστεί το κείμενο.
 #
-# Προϋποθέτει ότι το transcriptions.txt έχει τη μορφή:
-#   001<TAB>This was easy for us.
-#   002<TAB>Jane may earn more money by working hard.
-#   003<TAB>She is thinner than I am.
 #   ...
 source path.sh
 # -- Ρυθμίσεις διαδρομών --

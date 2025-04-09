@@ -1,5 +1,5 @@
 # gmm-init-model --write-occs=exp/tri_deltas/1.occs exp/tri_deltas/tree exp/tri_deltas/treeacc data/lang/topo exp/tri_deltas/1.mdl 
-# Started at Thu Apr  3 13:56:36 EEST 2025
+# Started at Wed Apr  9 14:14:26 EEST 2025
 #
 gmm-init-model --write-occs=exp/tri_deltas/1.occs exp/tri_deltas/tree exp/tri_deltas/treeacc data/lang/topo exp/tri_deltas/1.mdl 
 LOG (gmm-init-model[5.5.1168~1-01aad]:main():gmm-init-model.cc:271) Number of separate statistics is 17528
@@ -73,5 +73,5 @@ WARNING (gmm-init-model[5.5.1168~1-01aad]:InitAmGmm():gmm-init-model.cc:83) Very
 WARNING (gmm-init-model[5.5.1168~1-01aad]:InitAmGmm():gmm-init-model.cc:83) Very small count for state 840: 74; corresponding phone list: 14 15 16 17 
 WARNING (gmm-init-model[5.5.1168~1-01aad]:InitAmGmm():gmm-init-model.cc:83) Very small count for state 855: 85; corresponding phone list: 94 95 96 97 
 LOG (gmm-init-model[5.5.1168~1-01aad]:main():gmm-init-model.cc:306) Wrote model.
-# Accounting: time=0 threads=1
-# Ended (code 0) at Thu Apr  3 13:56:36 EEST 2025, elapsed time 0 seconds
+# Accounting: time=1 threads=1
+# Ended (code 0) at Wed Apr  9 14:14:27 EEST 2025, elapsed time 1 seconds
